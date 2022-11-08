@@ -1,0 +1,26 @@
+version: '3'
+
+tasks:
+  up:
+    cmds:
+      - docker compose up -d
+
+  down:
+    cmds:
+      - docker compose down
+
+  build:
+    cmds:
+      - docker compose build
+
+  destroy:
+    cmds:
+      - docker compose down --volumes --remove-orphans
+
+  wp:
+    cmds:
+      - docker compose run --rm wp-cli wp {{.CLI_ARGS}}
+
+  bash:
+    cmds:
+      - docker compose exec wordpress bash
