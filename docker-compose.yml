@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   wordpress:
-    image: wordpress:6.0.3-php8.1
+    image: wordpress:${WORDPRESS_CONTAINER_IMAGE_TAG}
     ports:
       - 80:80
     environment:
@@ -29,7 +29,7 @@ services:
         target: /var/lib/mysql
 
   wp-cli:
-    image: wordpress:cli-php8.1
+    image: wordpress:${WPCLI_CONTAINER_IMAGE_TAG}
     command: --info
     working_dir: /var/www/html
     profiles:
