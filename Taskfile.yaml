@@ -1,6 +1,10 @@
 version: '3'
 
 tasks:
+  init:
+    cmds:
+      - cp .env.example .env
+
   up:
     cmds:
       - docker compose up -d
