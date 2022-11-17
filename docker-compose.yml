@@ -10,7 +10,7 @@ services:
       WORDPRESS_DB_USER: maria
       WORDPRESS_DB_PASSWORD: password
       WORDPRESS_DB_NAME: maria
-      WORDPRESS_DEBUG: false
+      WORDPRESS_DEBUG: true
     volumes:
       - type: bind
         source: ${PWD}/public_html
