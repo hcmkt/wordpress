@@ -13,7 +13,7 @@ services:
       WORDPRESS_DEBUG: true
     volumes:
       - type: bind
-        source: ${PWD}/public_html
+        source: ${PWD}/html
         target: /var/www/html
 
   mariadb:
@@ -44,7 +44,7 @@ services:
       WORDPRESS_DEBUG: false
     volumes:
       - type: bind
-        source: ${PWD}/public_html
+        source: ${PWD}/html
         target: /var/www/html
 
 volumes:
